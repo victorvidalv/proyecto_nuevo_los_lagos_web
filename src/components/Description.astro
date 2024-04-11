@@ -1,0 +1,114 @@
+---
+import { Image } from "astro:assets";
+import Event from "/src/assets/industria.jpg";
+---
+
+<section id="descripcion" class="section">
+  <div class="grid gap-12 row-gap-8 lg:grid-cols-2">
+    <div class="flex flex-col justify-center">
+      <div class="max-w-xl mb-6">
+        <h2
+          class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+        >
+          Qué es
+          <span class="inline-block text-deep-purple-accent-400"
+            >Viraliza Los Lagos</span
+          >
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg">
+          Viraliza los Lagos es un programa de formación destinado al traspaso
+          de conocimientos, habilidades, herramientas y/o metodologías,
+          relativas al emprendimiento y la innovación de MA e I 4.0, a través de
+          talleres, workshops y/o charlas.
+        </p>
+      </div>
+    </div>
+    <div>
+      <Image
+        src={Event}
+        alt="Event"
+        class="object-cover w-full h-56 rounded sm:h-96"
+        quality="50"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="grid gap-10 row-gap-8 lg:grid-cols-6">
+    <div class="lg:col-span-3 bg-my p-4">
+      <div class="mb-3">
+        <a
+          href="/"
+          aria-label="Article"
+          class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+        >
+          <p
+            class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-4xl xl:text-5xl"
+          >
+            Participantes - ¿quiénes pueden participar?
+          </p>
+        </a>
+      </div>
+      <p class="mb-4 text-base text-gray-700 md:text-lg">
+        Personas naturales mayores de 18 años, o representante de personas
+        jurídicas con ventas inferiores a 24.000 UF y antigüedad menor a 36
+        meses, con domicilio en la Región de Los Lagos.<br />
+      </p>
+      <span class="mt-3">
+        Los participantes deben contar con una idea de negocio o con un negocio
+        en funcionamiento, cuya ocupación esté relacionada con oportunidades de
+        MA e I4.0.</span
+      >
+    </div>
+
+    <div class="flex flex-col space-y-8 lg:col-span-3">
+      <div>
+        <div class="mb-3">
+          <a
+            href="/"
+            aria-label="Article"
+            class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+          >
+            <p
+              class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl"
+            >
+              Costo del Programa
+            </p>
+          </a>
+        </div>
+        <p class="mb-4 text-base text-gray-700 md:text-lg">
+          El programa <strong>es gratuito </strong> para los participantes y tiene
+          un <strong>cupo limitado de 40 personas.</strong>
+        </p>
+      </div>
+      <div>
+        <div class="mb-3">
+          <a
+            href="/"
+            aria-label="Article"
+            class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+          >
+            <p
+              class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl"
+            >
+              Áreas temáticas
+            </p>
+          </a>
+        </div>
+        <p class="mb-4 text-base text-gray-700 md:text-lg">
+          El programa "Viraliza Los Lagos" se enfoca en una amplia gama de
+          temáticas relacionadas con el emprendimiento, la innovación y el
+          desarrollo tecnológico. Desde el impulso de nuevas empresas hasta la
+          adopción de tecnologías de vanguardia en la industria.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg-my {
+    background-color: #a5ebdd;
+  }
+</style>

@@ -1,0 +1,22 @@
+{
+  "name": "square-singularity",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^5.2.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.5",
+    "axios": "^1.6.8",
+    "sass": "^1.72.0",
+    "scrollreveal": "^4.0.9",
+    "svelte": "^4.2.12",
+    "typescript": "^5.4.2"
+  }
+}

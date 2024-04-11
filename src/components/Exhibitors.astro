@@ -1,0 +1,124 @@
+---
+let  exhibitors = [
+  { 
+    name: "1 Marcelo Soto",
+    description: "Consultor en Industria 4.0, Transformación Digital e Innovación con enfoque en Gemelos Digitales. Lideró el Programa Estratégico Nacional de Industria 4.0 y desarrolló planes de Transformación Digital para empresas que buscan la Industria 4.0. ",
+    photography: "waitforimg.webp"
+
+  },
+    { 
+        name: "2 Víctor Vidal ",
+        description: "Descripción del expositor",
+        photography: "waitforimg.webp"
+    },
+    { 
+        name: "3 Nombre Expositor ",
+        description: "Descripción del expositor",
+    photography: "waitforimg.webp"
+
+    },
+    { 
+        name: "4 Nombre Expositor ",
+        description: "Descripción del expositor",
+    photography: "waitforimg.webp"
+    },
+    { 
+        name: "5 Nombre Expositor ",
+        description: "Descripción del expositor",
+    photography: "waitforimg.webp"
+    },
+    { 
+        name: "6 Nombre Expositor ",
+        description: "Descripción del expositor",
+    photography: "waitforimg.webp"
+    },
+    { 
+        name: "7 Nombre Expositor ",
+        description: "Descripción del expositor",
+    photography: "waitforimg.webp"
+    },
+    { 
+        name: "8 Nombre Expositor ",
+        description: "Descripción del expositor",
+    photography: "waitforimg.webp"
+    },
+   
+    
+];
+
+import { Image } from 'astro:assets';
+import Fondo from '../assets/fondo_slider2.jpeg';
+
+---
+
+
+<div class="relative">
+  <Image
+    class="absolute inset-0 object-cover w-full h-full"
+    src={Fondo}
+    alt="Astronaut"
+    width="600"
+    height="350"
+    quality="50"
+  />
+
+<div class="relative bg-opacity-90 bg-deep-purple-accent-700" id="expositores">
+    
+
+
+
+<section class="section">
+
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 ">
+      <div>
+        <p class="sectiontitle">
+        Expositores
+        </p>
+      </div>
+      <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+        <span class="relative inline-block">
+      
+          <span class="relative">Expositores</span>
+        </span>
+      Viraliza Los Lagos 2024
+      </h2>
+      <p class="text-base text-white md:text-lg">
+        Conoce a los expositores que estarán presentes en la feria de Viraliza Los Lagos 2024
+      </p>
+    </div>
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+   
+        { exhibitors.map((data) => 
+   <div  >
+
+        <div class="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+          <img class="object-cover w-full h-56 md:h-64 xl:h-80" src={data.photography}
+          alt={data.name}/>
+          <div class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+            <p class="mb-1 text-lg font-bold text-gray-100">{data.name}</p>
+  
+            <p class="mb-4 text-xs tracking-wide text-gray-400">
+                {data.description}
+            </p>
+            <div class="flex items-center justify-center space-x-3">
+       
+             
+            </div>
+          </div>
+        </div>
+
+
+  </div>
+
+        )
+          }
+
+<div>
+</div>
+</section>
+
+
+
+</div>
+
+

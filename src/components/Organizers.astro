@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import CORFO from "../assets/corfo.webp";
+import UST from "../assets/santotomas.webp";
+import CENTINELA from "../assets/grupocentinela.webp";
+
+let Images = [CORFO, UST];
+---
+
+<div class="bg-my">
+  <section class="section">
+    <div class="mx-auto mb-10 lg:max-w-xl sm:text-center">
+      <h2
+        class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+      >
+        Organizan
+      </h2>
+
+      <p class="text-base md:text-lg">
+   VIRALIZA Los Lagos de Manufactura Avanzada e Industria 4.0 es una iniciativa cofinanciada por CORFO donde participa Universidad Santo Tomás y Grupo Centinela.
+      </p>
+    </div>
+    <div
+      class="grid gap-5 mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:max-w-screen-lg"
+    >
+      {
+        Images.map((image, index) => (
+          <div class="logo" key={index}>
+            <div class="logoint">
+              <Image width="241" height="77" src={image} alt="logo corfo" />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+<style lang="scss">
+  .logo {
+    @apply col-span-1 lg:col-span-1;
+  }
+
+  .logoint {
+    @apply pb-5 mb-4 relative;
+  }
+
+  .bg-my {
+    background-color: #a5ebdd;
+  }
+</style>

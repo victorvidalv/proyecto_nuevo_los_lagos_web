@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Viraliza Los Lagos</title>
+    <meta
+      name="description"
+      content="Bienvenido a Viraliza Los Lagos 2024, programa de formación destinado al traspaso de conocimientos, habilidades, herramientas y/o metodologías, relativas al emprendimiento y la innovación de MA e I 4.0, a través de talleres, workshops y/o charlas."
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<!-- Global Styles -->
+
+<style lang="scss" global>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply pt-20;
+  }
+
+  .section {
+    @apply px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20;
+  }
+  .sectiontitle {
+    @apply inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400;
+  }
+</style>
+
