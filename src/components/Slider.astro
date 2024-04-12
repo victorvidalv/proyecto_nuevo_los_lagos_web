@@ -1,10 +1,18 @@
 ---
-import Preregister from "./Preregister.svelte";
 import { Image } from "astro:assets";
 import Fondo from "../assets/fondo_slider.jpeg";
+import Mapa from "../assets/mapa.png";
+import Index from "../pages/index.astro";
+import { Image } from "astro:assets";
+import CORFO from "../assets/corfo.webp";
+import UST from "../assets/santotomas.webp";
+import CENTINELA from "../assets/grupocentinela.webp";
+
+let Images = [CORFO, UST];
+
 ---
 
-<section id="inicio" class="relative">
+<section id="inicio" class="">
   <Image
     src={Fondo}
     class="absolute inset-0 object-cover w-full h-full"
@@ -21,23 +29,37 @@ import Fondo from "../assets/fondo_slider.jpeg";
       <div class="flex flex-col items-center justify-between xl:flex-row">
         <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
           <h2
-            class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none"
-          >
-            Viraliza Los Lagos<br class="hidden md:block py-3" />
-            Formación y apoyo al emprendimiento
+            class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+
+
+          Proyecto: Nuevo Lagos<br class="hidden md:block py-3" />
+          Manufactura Avanzada e i4.0
           </h2>
           <p class="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-            ¿Tienes una iniciativa o proyecto relacionado a Manufactura Avanzada
-            o Industria 4.0, para la Región de Los Lagos?. Este programa es para
-            ti.
+            Plataforma integral destinada a transformar la industria de la región mediante la unificación de formación especializada, actualidad industrial y un potente buscador de proveedores basado en IA.
           </p>
-
-          <p class="mb-4 text-4xl my-bg p-2">Programa Gratuito</p>
+¿
         </div>
-        <Preregister client:load />
+        
+    
       </div>
+      
     </div>
+    <div
+    class=" my-bg grid gap-5 mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:max-w-screen-lg"
+  >
+    {
+      Images.map((image, index) => (
+        <div class="logo" key={index}>
+          <div class="logoint">
+            <Image width="241" height="77" src={image} alt="logo corfo" />
+          </div>
+        </div>
+      ))
+    }
   </div>
+  </div>
+  
 </section>
 
 <style>
