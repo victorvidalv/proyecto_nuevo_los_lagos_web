@@ -1,9 +1,37 @@
-<section class="bg-deep-purple-accent-400">
-  <div
-    class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 text-white"
+---
+import { Image } from "astro:assets";
+import CORFO from "../assets/corfo.webp";
+import UST from "../assets/santotomas.webp";
+import CENTINELA from "../assets/grupocentinela.webp";
+import ASIMET from "../assets/asimet.webp";
+
+let Images = [ UST,ASIMET, CENTINELA,CORFO];
+---
+<div class="fixed bottom-0 w-full bg-white">
+  <button class="w-full p-3 b footer">
+
+    <div
+    class="grid gap-5 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg py-5"
   >
-    <div class="flex flex-col-reverse justify-between pt-5 pb-5 lg:flex-row">
-      <p class="">© Copyright 2024 - Grupo Centinela</p>
-    </div>
+    {
+      Images.map((image, index) => (
+        <div class="logo" key={index}>
+          <div class="logoint">
+            <Image width="241" height="77" src={image} alt="logo corfo" />
+          </div>
+        </div>
+      ))
+    }
   </div>
-</section>
+  </button>
+</div>
+
+<style>
+  .bg-white {
+    background-color: #fff !important;
+    z-index: 1000;
+  }
+</style>
+
+   
+ 

@@ -1,5 +1,7 @@
 <section
-  class="fixed top-0 left-0 right-0 z-50 bg-white py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-full"
+  class="fixed top-0 left-0 right-0 z-50 bg-white py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-full
+  bg-blue
+  "
 >
   <div
     class="relative flex items-center justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-22"
@@ -7,8 +9,8 @@
     <span class="inline-flex items-center">
       <!--?xml version="1.0" encoding="UTF-8"?-->
 
-      <span class="ml-2 text-2xl font-bold tracking-wide text-gray-800"
-        >NUEVO LOS LAGOS</span
+      <span class="ml-2 text-2xl font-bold tracking-wide "
+        ></span
       >
     </span>
 
@@ -19,20 +21,34 @@
 
       <li><a href="#descripcion" class="linknavbar">Descripción</a></li>
 
+      <li><a href="#objetivos" class="linknavbar">Objetivos</a></li>
+
       <li><a href="#organizacion" class="linknavbar">Organización</a></li>
 
-      <li><a href="#desafios" class="linknavbar">Desafíos</a></li>
+      <li><a href="#desafios" class="linknavbar">Desafíos y Brechas</a></li>
 
-      <li><a href="#beneficios" class="linknavbar">Beneficios</a></li>
+      <li><a href="#componentes" class="linknavbar">Componentes</a></li>
 
+      <li><a href="brochure.pdf" target="_blank" class="linknavbar bg-blues py-3 px-2">Descargar Brochure</a></li>
 
-      <li><a href="#faqs" class="linknavbar">Preguntas Frecuentes</a></li>
     </ul>
   </div>
 </section>
 
 <style lang="scss">
   .linknavbar {
-    @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400;
+    @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 text-black hover:text-deep-purple-accent-400;
+  }
+
+  .bg-blue  {
+
+background-color: #fff !important;
+color: #000 !important;
+
+  }
+
+  .bg-blues{
+    background-color: #2b6cb0;
+    color: #fff ;
   }
 </style>

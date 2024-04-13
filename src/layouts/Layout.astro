@@ -3,11 +3,20 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>Viraliza Los Lagos</title>
+    <title>Nuevo Los Lagos</title>
     <meta
       name="description"
-      content="Bienvenido a Viraliza Los Lagos 2024, programa de formación destinado al traspaso de conocimientos, habilidades, herramientas y/o metodologías, relativas al emprendimiento y la innovación de MA e I 4.0, a través de talleres, workshops y/o charlas."
+      content="Plataforma integral destinada a transformar la industria de la región mediante la unificación de formación especializada, actualidad industrial y un potente buscador de proveedores basado en IA."
     />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EFXP43570X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EFXP43570X');
+</script>
   </head>
   <body>
     <slot />
@@ -31,5 +40,12 @@
   .sectiontitle {
     @apply inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400;
   }
+
+
+  .text-blue {
+    color: #2b6cb0;
+    font-weight: 700;
+  }
+
 </style>
 
