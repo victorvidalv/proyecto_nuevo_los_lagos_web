@@ -7,7 +7,7 @@ import ASIMET from "../assets/asimet.webp";
 
 let Images = [ UST,ASIMET, CENTINELA,CORFO];
 ---
-<div class="fixed bottom-0 w-full bg-white">
+<div class="footer-container">
   <button class="w-full p-3 b footer">
 
     <div
@@ -31,6 +31,23 @@ let Images = [ UST,ASIMET, CENTINELA,CORFO];
     background-color: #fff !important;
     z-index: 1000;
   }
+
+  /* Estilos por defecto para móviles */
+.footer-container {
+  position: relative; /* No fijo */
+  width: 100%; /* Asumiendo que quieres que ocupe todo el ancho */
+  bottom: 0;
+  background-color: #fff; /* Fondo blanco */
+  z-index: 1000; /* Asegura que el footer esté encima de otros elementos */
+}
+
+/* Estilos para pantallas mayores a 768px */
+@media (min-width: 768px) {
+  .footer-container {
+    position: fixed; /* Footer fijo */
+  }
+}
+
 </style>
 
    
